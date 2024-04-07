@@ -10,7 +10,7 @@
 
 https://maxxiiime.github.io/KameHousePortfolio/
 
-### Run project on you computer
+### Run project on your computer
 
 Clone the repository
 
