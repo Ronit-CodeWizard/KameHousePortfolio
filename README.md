@@ -8,6 +8,8 @@
 <span style="color:red">WARNING :</span>
 **This is not the final version of my portfolio, it just show my avancement.**
 
+**It may not work sometimes**
+
 https://maxxiiime.github.io/KameHousePortfolio/
 
 ### Run project on your computer
