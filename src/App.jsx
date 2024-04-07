@@ -1,4 +1,7 @@
 import { OrbitControls } from "@react-three/drei"
+
+import Scene from './Components/Scene.jsx'
+
 function App() {
 
 
@@ -7,10 +10,8 @@ function App() {
       <OrbitControls/>
 
       <directionalLight position={ [1, 2, 3] } intensity={ 2.5 }/>
-      <mesh>
-        <boxGeometry scale={ 1.5 }/>
-        <meshStandardMaterial color="mediumpurple"/>
-      </mesh>
+      
+      <Scene/>
 
       
     </>
