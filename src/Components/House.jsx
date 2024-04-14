@@ -9,8 +9,10 @@ import Livingroom from './House/Livingroom'
 import Lunchroom from './House/Lunchroom'
 import Bathroom from './House/Bathroom'
 import Floor from './House/Floor'
-import Wibdows from './House/MyWindows'
 import MyWindows from './House/MyWindows'
+import VinylsCovers from './House/VinylsCovers'
+import MugLogo from './House/MugLogo'
+import Soap from './House/Soap'
 
 export default function House(props) {
 
@@ -29,6 +31,9 @@ export default function House(props) {
       <Bathroom nodes= { props.nodes } />
       <Floor nodes= { props.nodes } />
       <MyWindows nodes= { props.nodes } />
+      <VinylsCovers nodes= { props.nodes } />
+      <MugLogo nodes= { props.nodes } />
+      <Soap nodes= { props.nodes } />
    
     </group>
   )
