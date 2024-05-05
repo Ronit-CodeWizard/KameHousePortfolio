@@ -7,7 +7,7 @@ export default function Outdoor(props)
     return <>
         <mesh
             geometry={props.nodes.OutdoorMerge.geometry}
-            position={[6.459, 0.187, 1.473]}
+            position={[6.459, 1.187, 1.473]}
             rotation={[0, -0.918, 0]}
         >
             <meshBasicMaterial map={outdoorTextures} map-flipY={false} />

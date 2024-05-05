@@ -1,5 +1,4 @@
-import React, { useRef } from 'react'
-import { useGLTF, useTexture } from '@react-three/drei'
+import { useGLTF } from '@react-three/drei'
 
 import Walls from './House/Walls'
 import Roof from './House/Roof'
@@ -15,9 +14,6 @@ import MugLogo from './House/MugLogo'
 import Soap from './House/Soap'
 
 export default function House(props) {
-
-
-    const [islandTextures, roofTextures] = useTexture(['./Textures/IslandBaked.jpg', './Textures/HugeRoofBaked.jpg'])
 
   return (
     <group {...props} dispose={null}>     

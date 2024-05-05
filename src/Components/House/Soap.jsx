@@ -10,7 +10,7 @@ export default function Soap(props)
     return <>
         <mesh
             geometry={props.nodes.LogoCss.geometry}
-            position={[-3.684, 1.475, 2.366]}
+            position={[-3.684, 2.475, 2.366]}
             rotation={[Math.PI / 2, 0, -1.701]}
         >
             <meshBasicMaterial map={cssTexture} map-flipY={false} />
@@ -18,7 +18,7 @@ export default function Soap(props)
 
         <mesh
             geometry={props.nodes.LogoHtml.geometry}
-            position={[-3.56, 1.482, 0.302]}
+            position={[-3.56, 2.482, 0.302]}
             rotation={[Math.PI / 2, 0, -0.18]}
             scale={ 1.02 }
         >
@@ -27,7 +27,7 @@ export default function Soap(props)
 
         <mesh
             geometry={props.nodes.LogoJS.geometry}
-            position={[-2.563, 1.469, 3.468]}
+            position={[-2.563, 2.469, 3.468]}
             rotation={[Math.PI / 2, 0, -2.974]}
             scale={0.8}
         >
@@ -36,7 +36,7 @@ export default function Soap(props)
 
         <mesh
             geometry={props.nodes.LogoPython.geometry}
-            position={[-1.877, 1.869, 0.16]}
+            position={[-1.877, 2.869, 0.16]}
             rotation={[Math.PI / 2, 0, -0.1]}
         >
             <meshBasicMaterial map={pythonTexture} map-flipY={false} />

@@ -7,7 +7,7 @@ export default function Livingroom(props)
     return <>
         <mesh
             geometry={props.nodes.LivingroomMerge.geometry}
-            position={[1.611, 1.699, 2.841]}
+            position={[1.611, 2.699, 2.841]}
             rotation={[Math.PI, -0.235, Math.PI]}
         >
             <meshBasicMaterial map={livingroomTextures} map-flipY={false} />

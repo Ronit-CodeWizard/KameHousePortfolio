@@ -7,7 +7,7 @@ export default function Rock(props)
     return <>
         <mesh
             geometry={props.nodes.RockMerge.geometry}
-            position={[8.978, -0.789, 8.994]}
+            position={[8.978, 0.211 , 8.994]}
             rotation={[0, -0.609, 0]}
             scale={0.751}
         >

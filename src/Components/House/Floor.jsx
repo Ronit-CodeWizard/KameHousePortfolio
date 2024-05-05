@@ -8,6 +8,7 @@ export default function Floor(props)
     return <>
         <mesh
             geometry={props.nodes.FloorMerge.geometry}
+            position={[0, 1, 0]}
         >
             <meshBasicMaterial map={floorTextures} map-flipY={false} side={ THREE.DoubleSide }/>
 

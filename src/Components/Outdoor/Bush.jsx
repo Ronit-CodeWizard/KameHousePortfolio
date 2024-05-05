@@ -7,7 +7,7 @@ export default function Bush(props)
     return <>
         <mesh
             geometry={props.nodes.BushMerge.geometry}
-            position={[0.648, 5.028, 6.409]}
+            position={[0.648, 6.028, 6.409]}
             rotation={[0, 0.506, 0]}
         >
             <meshBasicMaterial map={bushTextures} map-flipY={false} />

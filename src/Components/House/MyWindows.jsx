@@ -7,7 +7,7 @@ export default function MyWindows(props)
     return <>
         <mesh
             geometry={props.nodes.WindowsMerge.geometry}
-            position={[4.167, 1.987, 0.095]}
+            position={[4.167, 2.987, 0.095]}
             rotation={[0, -0.125, 0]}
         >
             <meshBasicMaterial map={windowsTextures} map-flipY={false} />

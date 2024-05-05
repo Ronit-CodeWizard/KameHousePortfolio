@@ -7,7 +7,7 @@ export default function Palm(props)
     return <>
         <mesh
             geometry={props.nodes.PalmMerge.geometry}
-            position={[-6.454, -0.165, 3.178]}
+            position={[-6.454, 0.835, 3.178]}
             rotation={[0, -0.985, 0]}
         >
             <meshBasicMaterial map={palmTextures} map-flipY={false} />

@@ -7,7 +7,7 @@ export default function Roof(props)
     return <>
         <mesh
             geometry={props.nodes.RoofMerge.geometry}
-            position={[4.1, 5.903, 0]}
+            position={[4.1, 6.903, 0]}
             rotation={[-0.522, 0, 0]}
         >
             <meshBasicMaterial map={roofTexture} map-flipY={false} />

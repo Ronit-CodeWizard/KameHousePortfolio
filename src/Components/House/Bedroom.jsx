@@ -7,7 +7,7 @@ export default function Bedroom(props)
     return <>
         <mesh
             geometry={props.nodes.BedroomMerge.geometry}
-            position={[2.9, 3.139, -0.1]}
+            position={[2.9, 4.139, -0.1]}
             rotation={[0, -1.571, 0]}
         >
             <meshBasicMaterial map={bedroomTextures} map-flipY={false} />

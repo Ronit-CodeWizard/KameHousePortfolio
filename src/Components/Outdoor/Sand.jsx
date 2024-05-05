@@ -7,7 +7,7 @@ export default function Sand(props)
     return <>
         <mesh
             geometry={props.nodes.IslandMerge.geometry}
-            position={[0, -1.146, 0]}
+            position={[0, -0.146, 0]}
         >
             <meshBasicMaterial map={sandTextures} map-flipY={false} />
         </mesh>
