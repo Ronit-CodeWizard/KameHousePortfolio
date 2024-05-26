@@ -2,6 +2,8 @@
 
 ## Work in progress...
 
+![alt text](exemple.png)
+
 ### Go live
 
 ⚠️
