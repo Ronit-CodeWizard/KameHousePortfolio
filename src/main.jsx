@@ -12,7 +12,7 @@ root.render(
                 fov: 45,
                 near: 0.2,
                 far: 200,
-                position: [3, 2, 6],
+                position: [52, 7, 12],
             } }
         >
             <Perf position="top-left" />
