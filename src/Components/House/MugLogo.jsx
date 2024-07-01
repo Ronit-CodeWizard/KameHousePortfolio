@@ -18,24 +18,26 @@ export default function MugLogo(props)
 
         <mesh
             geometry={props.nodes.LogoBlender.geometry}
-            position={[1.621, 2.703, 2.782]}
+            position={[1.65, 2.703, 2.75]}
             rotation={[Math.PI / 2, 0, -2.923]}
+            scale={0.9}
+            
         >
             <meshBasicMaterial map={blenderTexture} map-flipY={false} />
         </mesh>
 
         <mesh
             geometry={props.nodes.LogoSymfony.geometry}
-            position={[3.619, 3.705, 3.496]}
+            position={[3.619, 3.705, 3.5]}
             rotation={[Math.PI / 2, 0, -Math.PI]}
-            scale={0.4}
+            scale={1.1}
         >
             <meshBasicMaterial map={symfonyTexture} map-flipY={false} />
         </mesh>
 
         <mesh
-            geometry={props.nodes.LogoThreejs.geometry}
-            position={[3.012, 3.248, 3.499]}
+            geometry={props.nodes.LogoThree.geometry}
+            position={[3.012, 3.248, 3.505]}
             rotation={[Math.PI / 2, 0, 3.135]}
         >
             <meshBasicMaterial map={threeTexture} map-flipY={false} />

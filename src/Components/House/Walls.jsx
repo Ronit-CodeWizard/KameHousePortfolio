@@ -3,7 +3,7 @@ import * as THREE from 'three'
 
 export default function Walls(props)
 {  
-    const [wallExtTexture, wallInTexture] = useTexture(['./Textures/WallExt.jpg', './Textures/WallIn.jpg'])
+    const [wallExtTexture, wallInTexture ] = useTexture(['./Textures/WallExt.jpg', './Textures/WallIn.jpg'])
 
     return <>
         <mesh
