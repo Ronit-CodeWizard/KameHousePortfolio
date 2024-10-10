@@ -10,8 +10,9 @@ import Bathroom from './House/Bathroom'
 import Floor from './House/Floor'
 import MyWindows from './House/MyWindows'
 import VinylsCovers from './House/VinylsCovers'
-import MugLogo from './House/MugLogo'
+import Mug from './House/Mug'
 import Soap from './House/Soap'
+import ShaderTab from './House/ShaderTab'
 
 export default function House(props) {
 
@@ -28,8 +29,9 @@ export default function House(props) {
       <Floor nodes= { props.nodes } />
       <MyWindows nodes= { props.nodes } />
       <VinylsCovers nodes= { props.nodes } />
-      <MugLogo nodes= { props.nodes } />
+      <Mug nodes= { props.nodes } />
       <Soap nodes= { props.nodes } />
+      <ShaderTab/>
    
     </group>
   )

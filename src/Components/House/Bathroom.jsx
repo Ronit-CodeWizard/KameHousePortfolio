@@ -6,9 +6,9 @@ export default function Bathroom(props)
 
     return <>
         <mesh
-            geometry={props.nodes.bathroomMerge.geometry}
-            position={[-3.679, 2.489, 2.366]}
-            rotation={[Math.PI / 2, 0, -1.504]}
+            geometry={props.nodes.BathroomMerge.geometry}
+            position={[-1.559, 2.748, 0.024]}
+            rotation={[0, -1.571, 0]}
         >
             <meshBasicMaterial map={bathroomTextures} map-flipY={false} />
         </mesh>
