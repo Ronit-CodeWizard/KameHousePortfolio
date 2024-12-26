@@ -13,6 +13,7 @@ import VinylsCovers from './House/VinylsCovers'
 import Mug from './House/Mug'
 import Soap from './House/Soap'
 import ShaderTab from './House/ShaderTab'
+import ShaderParticles from './House/ShaderParticles'
 
 export default function House(props) {
 
@@ -31,7 +32,10 @@ export default function House(props) {
       <VinylsCovers nodes= { props.nodes } />
       <Mug nodes= { props.nodes } />
       <Soap nodes= { props.nodes } />
-      <ShaderTab/>
+      <ShaderTab/> 
+      <ShaderParticles />
+
+      
    
     </group>
   )
