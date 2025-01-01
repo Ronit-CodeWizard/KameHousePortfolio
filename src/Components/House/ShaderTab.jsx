@@ -1,4 +1,4 @@
-import { useRef } from "react"
+import { useMemo, useRef } from "react"
 import { useFrame } from "@react-three/fiber";
 
 import fragmentShader from '../../shaders/tab/fragment.glsl'
@@ -8,14 +8,17 @@ export default function ShaderTab(props) {
 
     const planeRef = useRef()
 
-    const shaderMaterial = {
+    const shaderMaterial = useMemo(() => ({
       vertexShader: vertexShader,
       fragmentShader: fragmentShader,
       uniforms: {
         uTime: { value: 0 }
       }
+
+    })) 
+    
   
-    }
+    
   
     useFrame(({ clock }) => {
       planeRef.current.material.uniforms.uTime.value = clock.getElapsedTime();
