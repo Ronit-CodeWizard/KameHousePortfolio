@@ -1,5 +1,3 @@
-import { useGLTF } from '@react-three/drei'
-
 import Walls from './House/Walls'
 import Roof from './House/Roof'
 import Kitchen from './House/Kitchen'
@@ -40,5 +38,3 @@ export default function House(props) {
     </group>
   )
 }
-
-useGLTF.preload('/House.glb')

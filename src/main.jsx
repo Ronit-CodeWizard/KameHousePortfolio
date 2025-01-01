@@ -15,7 +15,7 @@ root.render(
                 position: [52, 7, 12],
             } }
         >
-            <Perf position="top-left" />
+            {/* <Perf position="top-left" />*/}
             <App />
         
 

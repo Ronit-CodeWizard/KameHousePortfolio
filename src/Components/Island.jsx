@@ -1,6 +1,3 @@
-import React, { useRef } from 'react'
-import { useGLTF, useTexture } from '@react-three/drei'
-
 import Sand from './Outdoor/Sand'
 import Rock from './Outdoor/Rock'
 import Bush from './Outdoor/Bush'
