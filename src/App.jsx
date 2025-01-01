@@ -1,46 +1,47 @@
-import { useGLTF, Sky, Float, Text, ScrollControls, OrbitControls } from "@react-three/drei"
-import { useThree } from "@react-three/fiber"
+import {Sky, Float, Text, ScrollControls, useGLTF } from "@react-three/drei"
 
 import Scene from './Components/Scene.jsx'
 import Ocean from "./Components/Ocean.jsx"
+import OverlayScroll from "./Components/OverlayScroll.jsx"
+import CameraScroll from './Components/CameraScroll.jsx'
 
-function App() {
+import "./App.css";
+
+
+export default function App() {
+
+  const { nodes } = useGLTF('./Model/House.glb')
   
   return (
     <>
 
       <directionalLight position={ [1, 2, 3] } intensity={ 2.5 }/>
-          
-      <ScrollControls pages={10} damping={0.1}>
-      
 
-        <Sky 
-          sunPosition={[1, 0.1, 1]}         
-        />
+      <Ocean/>
+      <Sky sunPosition={[1, 0.1, 1]}/>
       
-        <Float
-          rotationIntensity={0.7}
-        >
+      <Float rotationIntensity={0.9}>
           <Text
             font="./fonts/font.ttf"
             position-y={ 15 }
-            rotation-y={ 0.4166666667 * Math.PI }
+            rotation-y={ 0.48 * Math.PI }
             curveRadius={ -50 }
             fontSize={ 5 }
           >
             Maxime's Portfolio
-          </Text>
-          </Float>
-    
-        <Scene/>
-        <Ocean/>
-      </ScrollControls>
+        </Text>
+      </Float>
+
+      <Scene nodes= { nodes }/>
      
-
-
+          
+      <ScrollControls pages={15} damping={0.2}>       
+    
+        <CameraScroll nodes= { nodes }/>
+        {/* <OverlayScroll/>*/}
+        
+      </ScrollControls>
       
     </>
   )
 }
-
-export default App
