@@ -2,7 +2,6 @@ import {Sky, Float, Text, ScrollControls, useGLTF } from "@react-three/drei"
 
 import Scene from './Components/Scene.jsx'
 import Ocean from "./Components/Ocean.jsx"
-import OverlayScroll from "./Components/OverlayScroll.jsx"
 import CameraScroll from './Components/CameraScroll.jsx'
 
 import "./App.css";
@@ -38,7 +37,6 @@ export default function App() {
       <ScrollControls pages={15} damping={0.2}>       
     
         <CameraScroll nodes= { nodes }/>
-        {/* <OverlayScroll/>*/}
         
       </ScrollControls>
       
