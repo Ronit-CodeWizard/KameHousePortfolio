@@ -3,7 +3,9 @@ import { useFrame, useThree } from '@react-three/fiber'
 import { useScroll } from '@react-three/drei'
 import { useTexture } from '@react-three/drei'
 import { Text } from '@react-three/drei'
+import TvScreen from './House/TvScreen.jsx'
 import * as THREE from 'three';
+import { useState } from 'react'
 
 
 import gsap from 'gsap'
@@ -53,6 +55,11 @@ export default function CameraScroll(props) {
     
     const sport1TextRef = useRef()
     const sport2TextRef = useRef()
+
+    const seeyouTextRef = useRef()
+
+    const [progress, setProgress] = useState(1)
+    const [opacity, setOpacity] = useState(0)
  
     const scroll = useScroll()
 
@@ -161,7 +168,7 @@ export default function CameraScroll(props) {
             {
                 duration: 2,
                 x: 1.8,
-                y: 2.7,
+                y: 2.75,
                 z: 2.4,
             }
         )
@@ -713,7 +720,7 @@ export default function CameraScroll(props) {
             camera.position,
             {
                 duration: 2,
-                x: 0.5,
+                x: 0.6,
                 y: 2.4,
                 z: -2.1,
             }
@@ -728,6 +735,45 @@ export default function CameraScroll(props) {
             
             }, "<"          
         ) 
+        tlRef.current.to(
+            seeyouTextRef.current.material,
+            {
+                opacity: 1,
+            },"<40%"     
+        ) 
+
+        //ZOOM ON TV SCREEN
+        tlRef.current.to(
+            camera.position,
+            {
+                duration: 2,
+                x: 0.6,
+                y: 2.35 ,
+                z: -2.8,
+            }
+        )
+
+        tlRef.current.to(
+            { value: 1 },
+            {
+                duration: 2,
+                value: 10,
+                onUpdate: function () {
+                    setProgress(this.targets()[0].value);
+                },
+            },
+            "<" 
+        )
+        tlRef.current.to(
+            { value: -1 },
+            {
+                value: 1,
+                onUpdate: function () {
+                    setOpacity(this.targets()[0].value);
+                },
+            },
+            "<60%" 
+        );
     }, [])
 
     return <>
@@ -740,7 +786,9 @@ export default function CameraScroll(props) {
             >
                 <meshBasicMaterial map={DoorTexture} map-flipY={false} />
             </mesh>
-        </group>        
+        </group>  
+
+        <TvScreen progress={progress} opacity={opacity}/>      
 
         <Text
             ref={reactTextRef}
@@ -1080,6 +1128,18 @@ export default function CameraScroll(props) {
                 I pratice boxing
             </Text>
         </group>
+
+        <Text
+            ref={seeyouTextRef}
+            font="./fonts/Bangers.ttf"
+            position={[0, 2.7, -3.7]}
+            fontSize={0.2}
+            color="#f4eadb"
+            maxWidth={1}
+            material-opacity={0}                
+        >
+            Let's keep in touch !
+        </Text>
 
     </>
     
