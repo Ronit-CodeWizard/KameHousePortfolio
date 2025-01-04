@@ -12,11 +12,11 @@ export default function TvScreen(props)
     const logosRef = useRef()
 
 
-    const githubTexture = useLoader(TextureLoader, "../../../logos/logoGithub.png");
-    const xTexture = useLoader(TextureLoader, "../../../logos/logoX.png");
-    const linledinTexture = useLoader(TextureLoader, "../../../logos/logoLinkedin.png");
-    const cvTexture = useLoader(TextureLoader, "../../../logos/logoCV.png");
-    const sourceTexture = useLoader(TextureLoader, "../../../logos/logoSource.png");
+    const githubTexture = useLoader(TextureLoader, "/logos/logoGithub.png");
+    const xTexture = useLoader(TextureLoader, "/logos/logoX.png");
+    const linledinTexture = useLoader(TextureLoader, "/logos/logoLinkedin.png");
+    const cvTexture = useLoader(TextureLoader, "/logos/logoCV.png");
+    const sourceTexture = useLoader(TextureLoader, "/logos/logoSource.png");
 
     let i=0
     
@@ -92,7 +92,7 @@ export default function TvScreen(props)
       <mesh 
         position={[0.4, 2.25, -3.48]} 
         scale={[0.07, 0.1, 0.1]}
-        onClick={() => handleClick("../../../CV/CVGuillonMaxime.pdf")}
+        onClick={() => handleClick("/CV/CVGuillonMaxime.pdf")}
       >
         <planeGeometry/>
         <meshBasicMaterial  map={cvTexture} transparent />
