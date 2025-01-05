@@ -96,7 +96,7 @@ export default function Particle()
         vertexShader: vertexShader,
         fragmentShader: fragmentShader,
         uniforms: {
-            uSize: new THREE.Uniform(0.02),
+            uSize: new THREE.Uniform(0.01),
             uResolution: new THREE.Uniform(
                 new THREE.Vector2(sizes.width * sizes.pixelRatio, sizes.height * sizes.pixelRatio)
             ),
