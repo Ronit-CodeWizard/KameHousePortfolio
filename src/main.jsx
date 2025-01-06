@@ -15,27 +15,13 @@ const isMobile = () => {
 
 const root = ReactDOM.createRoot(document.querySelector('#root'))
 
-const canvaForMobile = () =>
-(
+const fovForMobile = 100
+const fovForPc = 45
+
+root.render(
     <Canvas
         camera={{
-        fov: 100,
-        near: 0.1,
-        far: 200,
-        position: [52, 7, 12],
-        }}
-        
-        >
-        <App/>
-    </Canvas>
-
-)
-
-const canvaForPC = () =>
-(
-    <Canvas
-        camera={{
-        fov: 45,
+        fov: isMobile() ? fovForMobile : fovForPc,
         near: 0.1,
         far: 200,
         position: [52, 7, 12],
@@ -44,10 +30,6 @@ const canvaForPC = () =>
         <App/>
         <Perf position="top-left" />
     </Canvas>
+
     
-)
-
-root.render(
-
-    isMobile() ? canvaForMobile() : canvaForPC()
 )
