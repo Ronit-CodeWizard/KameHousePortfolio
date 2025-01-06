@@ -36,8 +36,8 @@ export default function TvScreen(props)
         vertexShader: vertexShader,
         fragmentShader: fragmentShader,
         uniforms: {
-          uTime: { value: 0 },
-          uProgress: { value: props.progress }
+          uTime: new Uniform(0),
+          uProgress: new Uniform(props.progress)
         }
     
       }

@@ -1,14 +1,11 @@
-import { useLayoutEffect, useRef } from 'react'
+import { useLayoutEffect, useRef, useState } from 'react'
 import { useFrame, useThree } from '@react-three/fiber'
-import { useScroll } from '@react-three/drei'
-import { useTexture } from '@react-three/drei'
-import { Text } from '@react-three/drei'
-import TvScreen from './House/TvScreen.jsx'
-import * as THREE from 'three';
-import { useState } from 'react'
-
+import { useScroll, useTexture, Text } from '@react-three/drei'
+import { FrontSide } from 'three'
 
 import gsap from 'gsap'
+
+import TvScreen from './House/TvScreen.jsx'
 
 export default function CameraScroll(props) {
 
@@ -920,7 +917,7 @@ export default function CameraScroll(props) {
                 rotation-y={Math.PI/2}
                 color="#f4eadb"
                 maxWidth={0.5}
-                material-side={THREE.FrontSide}
+                material-side={FrontSide}
                 material-opacity={0}
             >
             Higher National Diploma in Computer Sciences
@@ -932,7 +929,7 @@ export default function CameraScroll(props) {
                 fontSize={0.02}
                 rotation-y={Math.PI/2}
                 color="#f4eadb"
-                material-side={THREE.FrontSide}
+                material-side={FrontSide}
                 material-opacity={0}
             >
                 (DUT informatique)
@@ -945,7 +942,7 @@ export default function CameraScroll(props) {
                 fontSize={0.02}
                 rotation-y={Math.PI/2}
                 color="#f4eadb"
-                material-side={THREE.FrontSide}
+                material-side={FrontSide}
                 material-opacity={0}
             >
                 University of La Rochelle
@@ -961,7 +958,7 @@ export default function CameraScroll(props) {
                 rotation-y={Math.PI/2}
                 color="#f4eadb"
                 maxWidth={0.5}
-                material-side={THREE.FrontSide}
+                material-side={FrontSide}
                 material-opacity={0}
             >
             Bachelor’s degree in Computer Sciences
@@ -973,7 +970,7 @@ export default function CameraScroll(props) {
                 fontSize={0.02}
                 rotation-y={Math.PI/2}
                 color="#f4eadb"
-                material-side={THREE.FrontSide}
+                material-side={FrontSide}
                 material-opacity={0}
             >
                 (Licence informatique)
@@ -986,7 +983,7 @@ export default function CameraScroll(props) {
                 fontSize={0.02}
                 rotation-y={Math.PI/2}
                 color="#f4eadb"
-                material-side={THREE.FrontSide}
+                material-side={FrontSide}
                 material-opacity={0}
             >
                 University of La Rochelle
@@ -1002,7 +999,7 @@ export default function CameraScroll(props) {
                 rotation-y={Math.PI/2}
                 color="#f4eadb"
                 maxWidth={0.85}
-                material-side={THREE.FrontSide}
+                material-side={FrontSide}
                 material-opacity={0}
             >
             Master’s degree in Computer Sciences (In progress...)
@@ -1014,7 +1011,7 @@ export default function CameraScroll(props) {
                 fontSize={0.02}
                 rotation-y={Math.PI/2}
                 color="#f4eadb"
-                material-side={THREE.FrontSide}
+                material-side={FrontSide}
                 material-opacity={0}
             >
                 (Master informatique)
@@ -1027,7 +1024,7 @@ export default function CameraScroll(props) {
                 fontSize={0.02}
                 rotation-y={Math.PI/2}
                 color="#f4eadb"
-                material-side={THREE.FrontSide}
+                material-side={FrontSide}
                 material-opacity={0}
             >
                 University of Bordeaux

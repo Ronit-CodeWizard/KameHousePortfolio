@@ -19,7 +19,7 @@ export default function ShaderSmoke() {
       vertexShader: vertexShader,
       fragmentShader: fragmentShader,
       uniforms: {
-        uTime: { value: 0 },
+        uTime: new Uniform(0),
         uPerlinTexture: new Uniform(noiseTexture)
       }
 

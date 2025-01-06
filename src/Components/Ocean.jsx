@@ -1,7 +1,7 @@
 import { useTexture } from '@react-three/drei';
 import { useFrame, extend, useThree } from '@react-three/fiber';
 import { useRef } from 'react';
-import * as THREE from 'three';
+import { RepeatWrapping, PlaneGeometry, Vector3 } from 'three';
 
 import { Water } from "three/examples/jsm/objects/Water.js";
 
@@ -11,7 +11,7 @@ export default function Ocean()
 {
     const oceanRef = useRef();
     const waterNormals = useTexture('./Textures/waternormals.jpg')
-    waterNormals.wrapS = waterNormals.wrapT = THREE.RepeatWrapping
+    waterNormals.wrapS = waterNormals.wrapT = RepeatWrapping
     const gl = useThree((state) => state.gl);
 
     useFrame(
@@ -23,12 +23,12 @@ export default function Ocean()
         <water
             ref={oceanRef}
             args={[
-                new THREE.PlaneGeometry(10000, 10000),
+                new PlaneGeometry(10000, 10000),
                 {
                     textureWidth: 512,
                     textureHeight: 512,
                     waterNormals,
-                    sunDirection: new THREE.Vector3(),
+                    sunDirection: new Vector3(),
                     sunColor: 0xeb8934,
                     waterColor: 0x00f6682,
                     distortionScale: 40,

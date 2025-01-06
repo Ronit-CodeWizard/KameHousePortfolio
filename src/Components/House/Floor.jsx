@@ -1,5 +1,5 @@
 import { useTexture } from '@react-three/drei'
-import * as THREE from 'three'
+import { DoubleSide } from 'three'
 
 export default function Floor(props)
 {
@@ -10,7 +10,7 @@ export default function Floor(props)
             geometry={props.nodes.FloorMerge.geometry}
             position={[0, 1, 0]}
         >
-            <meshBasicMaterial map={floorTextures} map-flipY={false} side={ THREE.DoubleSide }/>
+            <meshBasicMaterial map={floorTextures} map-flipY={false} side={ DoubleSide }/>
 
         </mesh>
     </>

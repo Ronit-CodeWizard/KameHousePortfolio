@@ -1,10 +1,11 @@
-import vertexShader from '../../shaders/particles/vertex.glsl'
-import fragmentShader from '../../shaders/particles/fragment.glsl'
 import { useRef, useEffect, useMemo } from 'react'
-import gsap from 'gsap'
 import { useGSAP } from '@gsap/react'
 
-import * as THREE from 'three'
+import { TorusGeometry, DodecahedronGeometry, BoxGeometry, TorusKnotGeometry, Float32BufferAttribute, Uniform, Vector2, Color,BufferAttribute, AdditiveBlending } from 'three'
+import gsap from 'gsap'
+
+import vertexShader from '../../shaders/particles/vertex.glsl'
+import fragmentShader from '../../shaders/particles/fragment.glsl'
 
 export default function Particle()
 {
@@ -23,10 +24,10 @@ export default function Particle()
     particles.maxCount = 0
 
     const geometries = [
-        new THREE.TorusGeometry(0.1, 0.03, 16, 32).rotateX(Math.PI/6).rotateY(2*Math.PI/3),
-        new THREE.DodecahedronGeometry(0.15, 2),
-        new THREE.BoxGeometry(0.15, 0.15, 0.15, 9, 9, 9).rotateX(5*Math.PI/6).rotateY(4*Math.PI/3),
-        new THREE.TorusKnotGeometry(0.1, 0.02, 100, 5).rotateY(Math.PI/2)
+        new TorusGeometry(0.1, 0.03, 16, 32).rotateX(Math.PI/6).rotateY(2*Math.PI/3),
+        new DodecahedronGeometry(0.15, 2),
+        new BoxGeometry(0.15, 0.15, 0.15, 9, 9, 9).rotateX(5*Math.PI/6).rotateY(4*Math.PI/3),
+        new TorusKnotGeometry(0.1, 0.02, 100, 5).rotateY(Math.PI/2)
     ]
 
     const positions = geometries.map((geo) => geo.attributes.position)
@@ -52,7 +53,7 @@ export default function Particle()
                 newArray.set(originalArray.slice(randomIndex, randomIndex + 3), i3);
             }
         }
-        particles.positions.push(new THREE.Float32BufferAttribute(newArray, 3))
+        particles.positions.push(new Float32BufferAttribute(newArray, 3))
 
     }
 
@@ -96,13 +97,13 @@ export default function Particle()
         vertexShader: vertexShader,
         fragmentShader: fragmentShader,
         uniforms: {
-            uSize: new THREE.Uniform(0.01),
-            uResolution: new THREE.Uniform(
-                new THREE.Vector2(sizes.width * sizes.pixelRatio, sizes.height * sizes.pixelRatio)
+            uSize: new Uniform(0.01),
+            uResolution: new Uniform(
+                new Vector2(sizes.width * sizes.pixelRatio, sizes.height * sizes.pixelRatio)
             ),
-            uProgress: new THREE.Uniform(0),
-            uColorA: new THREE.Uniform(new THREE.Color('#f79929')),
-            uColorB: new THREE.Uniform(new THREE.Color('#e1cd9e')),
+            uProgress: new Uniform(0),
+            uColorA: new Uniform(new Color('#f79929')),
+            uColorB: new Uniform(new Color('#e1cd9e')),
         }
     }), [sizes]);
    
@@ -113,17 +114,17 @@ export default function Particle()
                 <bufferGeometry>
                     <bufferAttribute
                         attach="attributes-position"
-                    {...new THREE.BufferAttribute(new Float32Array(particles.positions[particles.index].array), 3)}
+                    {...new BufferAttribute(new Float32Array(particles.positions[particles.index].array), 3)}
                     />
                     <bufferAttribute
                         attach="attributes-aPositionTarget"
-                    {...new THREE.BufferAttribute(new Float32Array(particles.positions[particles.nextIndex].array), 3)}
+                    {...new BufferAttribute(new Float32Array(particles.positions[particles.nextIndex].array), 3)}
                     />
                 </bufferGeometry>
                 <shaderMaterial
                     vertexShader={vertexShader}
                     depthWrite={false}
-                    blending={THREE.AdditiveBlending}
+                    blending={AdditiveBlending}
                     vertexColors={true}
                     attach="material"
                     args={[ParticleShaderMaterial]}

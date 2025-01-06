@@ -1,8 +1,11 @@
 import { useMemo, useRef } from "react"
 import { useFrame } from "@react-three/fiber";
 
+import { Uniform } from "three";
+
 import fragmentShader from '../../shaders/tab/fragment.glsl'
 import vertexShader from '../../shaders/tab/vertex.glsl'
+
 
 export default function ShaderTab(props) {
 
@@ -12,12 +15,10 @@ export default function ShaderTab(props) {
       vertexShader: vertexShader,
       fragmentShader: fragmentShader,
       uniforms: {
-        uTime: { value: 0 }
+        uTime: new Uniform(0)
       }
 
     })) 
-    
-  
     
   
     useFrame(({ clock }) => {
