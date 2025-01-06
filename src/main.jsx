@@ -5,9 +5,6 @@ import { Perf } from 'r3f-perf'
 import App from './App.jsx'
 
 const isMobile = () => {
-
-    console.log("Largeur = " + window.innerWidth)
-    console.log("Hauteur = " + window.innerHeight)
     return ( ( window.innerWidth <= 800 ) && ( window.innerHeight <= 600 ) );
   }
 
