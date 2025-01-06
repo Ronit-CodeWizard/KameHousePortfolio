@@ -12,6 +12,7 @@ import Mug from './House/Mug'
 import Soap from './House/Soap'
 import ShaderTab from './House/ShaderTab'
 import ShaderParticles from './House/ShaderParticles'
+import ShaderSmoke from './House/ShaderSmoke'
 
 export default function House(props) {
 
@@ -32,6 +33,7 @@ export default function House(props) {
       <Soap nodes= { props.nodes } />
       <ShaderTab/> 
       <ShaderParticles />
+      <ShaderSmoke/>
 
       
    
