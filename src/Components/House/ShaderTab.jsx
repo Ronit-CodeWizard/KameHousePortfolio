@@ -8,7 +8,7 @@ export default function ShaderTab(props) {
 
     const planeRef = useRef()
 
-    const shaderMaterial = useMemo(() => ({
+    const tabShaderMaterial = useMemo(() => ({
       vertexShader: vertexShader,
       fragmentShader: fragmentShader,
       uniforms: {
@@ -30,7 +30,7 @@ export default function ShaderTab(props) {
             <planeGeometry args={[1.13, 0.4]} />
             <shaderMaterial 
                 attach="material" 
-                args={[shaderMaterial]}  
+                args={[tabShaderMaterial]}  
             />
         
             </mesh>
