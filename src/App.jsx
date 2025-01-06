@@ -34,7 +34,7 @@ export default function App() {
       <Scene nodes= { nodes }/>
      
           
-      <ScrollControls pages={15} damping={0.2}>       
+      <ScrollControls pages={25} damping={0.2}>       
     
         <CameraScroll nodes= { nodes }/>
         
