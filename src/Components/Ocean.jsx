@@ -14,31 +14,30 @@ export default function Ocean()
     waterNormals.wrapS = waterNormals.wrapT = RepeatWrapping
     const gl = useThree((state) => state.gl);
 
-    useFrame(
-        (state, delta) => (oceanRef.current.material.uniforms.time.value += delta * 0.3)
-      );
+    useFrame(({ clock }) => {
+        oceanRef.current.material.uniforms.time.value = clock.getElapsedTime() * 0.4;
+    });
 
 
     return <>
         <water
             ref={oceanRef}
             args={[
-                new PlaneGeometry(10000, 10000),
+                new PlaneGeometry(200, 300),
                 {
-                    textureWidth: 512,
-                    textureHeight: 512,
+                    textureWidth: 64,
+                    textureHeight: 64,
                     waterNormals,
-                    sunDirection: new Vector3(),
+                    sunDirection: new Vector3(0),
                     sunColor: 0xeb8934,
                     waterColor: 0x00f6682,
-                    distortionScale: 40,
+                    distortionScale: 5,
                     fog: false,
-                    format: gl.encoding,
+                    //format: gl.encoding,
                 },
                 
             ]}
             rotation-x={-Math.PI / 2}
-            position={[0, 0, 0]}
         />
     </>
 
