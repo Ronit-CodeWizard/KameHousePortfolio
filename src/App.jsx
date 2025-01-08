@@ -1,4 +1,4 @@
-import {Sky, Float, Text, ScrollControls, useGLTF } from "@react-three/drei"
+import {Sky, Float, Text, ScrollControls, useGLTF, useTexture } from "@react-three/drei"
 
 import Scene from './Components/Scene.jsx'
 import Ocean from "./Components/Ocean.jsx"
@@ -34,12 +34,12 @@ export default function App() {
       <Scene nodes= { nodes }/>
      
           
-      <ScrollControls pages={25} damping={0.2}>       
-    
+      <ScrollControls pages={25} damping={0.2}>    
         <CameraScroll nodes= { nodes }/>
-        
       </ScrollControls>
       
     </>
   )
 }
+
+useGLTF.preload('./Model/House.glb')
