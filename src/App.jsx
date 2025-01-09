@@ -5,6 +5,7 @@ import Ocean from "./Components/Ocean.jsx"
 import CameraScroll from './Components/CameraScroll.jsx'
 
 import "./App.css";
+import ScrollHelper from "./Components/ScrollHelper.jsx";
 
 
 export default function App() {
@@ -37,6 +38,8 @@ export default function App() {
       <ScrollControls pages={25} damping={0.2}>    
         <CameraScroll nodes= { nodes }/>
       </ScrollControls>
+
+      <ScrollHelper/>
       
     </>
   )
