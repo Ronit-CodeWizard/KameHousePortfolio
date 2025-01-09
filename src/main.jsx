@@ -2,8 +2,11 @@ import './index.css'
 import ReactDOM from 'react-dom/client'
 import { Canvas } from '@react-three/fiber'
 import { Perf } from 'r3f-perf'
+import { StrictMode, Suspense } from 'react'
+
 import App from './App.jsx'
-import { StrictMode } from 'react'
+import Loader from './Components/Loader.jsx'
+
 
 const isMobile = () => {
     return ( ( window.innerWidth <= 800 ) && ( window.innerHeight <= 600 ) );
@@ -24,8 +27,10 @@ root.render(
             position: [52, 7, 12],
         }}
         >
-            
-            <App/>            
+            <Suspense fallback={<Loader/>}>
+                <App/>   
+            </Suspense>
+
             <Perf position="top-left" />
         </Canvas>
     </StrictMode>

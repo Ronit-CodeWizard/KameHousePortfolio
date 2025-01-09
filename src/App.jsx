@@ -1,4 +1,4 @@
-import {Sky, Float, Text, ScrollControls, useGLTF, useTexture } from "@react-three/drei"
+import {Sky, Float, Text, ScrollControls, useGLTF } from "@react-three/drei"
 
 import Scene from './Components/Scene.jsx'
 import Ocean from "./Components/Ocean.jsx"

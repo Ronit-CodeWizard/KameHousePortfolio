@@ -1,0 +1,49 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+  
+body, html {
+  height: 100%;
+  font-family: 'Arial', sans-serif;
+}
+  
+.carte {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;  
+
+  background-image: url("./Textures/map.jpg");
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.ship {
+
+  width: 20%;  
+  animation: tanguer 4s ease-in-out infinite; 
+
+}
+
+.text {
+  margin-top: 20px; 
+  font-family: MedievalSharp;
+  font-size: 3vh;
+}
+
+@keyframes tanguer {
+  0% {
+    transform: rotate(-8deg);
+  }
+  50% {
+    transform: rotate(7deg); 
+  }
+  100% {
+    transform: rotate(-7deg); 
+  }
+}
