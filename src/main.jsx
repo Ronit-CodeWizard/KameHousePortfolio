@@ -1,11 +1,14 @@
-import './index.css'
+import { Analytics } from "@vercel/analytics/react"
+
 import ReactDOM from 'react-dom/client'
 import { Canvas } from '@react-three/fiber'
 import { Perf } from 'r3f-perf'
 import { StrictMode, Suspense } from 'react'
 
-import App from './App.jsx'
 import Loader from './Components/Loader.jsx'
+import App from './App.jsx'
+import './index.css'
+
 
 
 const isMobile = () => {
@@ -33,7 +36,11 @@ root.render(
 
             {/*<Perf position="top-left" />*/}
         </Canvas>
+
+        <Analytics/>
+        
     </StrictMode>
 
+        
     
 )
