@@ -1,33 +1,17 @@
 # Kame House Portfolio
 
-## Work in progress...
-
 ![alt text](exemple.png)
 
-### Go live
+### Welcome to my portfolio
 
-⚠️
-<span style="color:red">WARNING :</span>
-**This is not the final version of my portfolio, it just show my avancement.**
+Hi everyone, thanks for being here.
 
-**It may not work sometimes**
+I am a computer science student. I made this portfolio alongside my studies to increase my web development skills and show them.
 
-https://maxxiiime.github.io/KameHousePortfolio/
+Some details about this project.
 
-### Run project on your computer
+I made this project with React Three Fiber. I used helpers from Drei. I used GSAP to animate the camera. The shaders are written with GLSL. I used Blender to create the house.
 
-Clone the repository
+If you notice a bug or if you have any questions, please contact me.
 
-```
-https://github.com/Maxxiiime/KameHousePortfolio.git
-```
-
-Go in terminal, move in the project folder and run :
-
-```
-npm install
-```
-
-```
-npm run dev
-```
+**Go live :** https://maxxiiime.github.io/KameHousePortfolio/
