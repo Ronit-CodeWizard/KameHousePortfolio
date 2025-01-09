@@ -9,6 +9,7 @@ import Loader from './Components/Loader.jsx'
 import App from './App.jsx'
 import './index.css'
 
+console.log("Hi if you notice a bug please contact me max2002guillon@gmail.com")
 
 
 const isMobile = () => {
@@ -38,7 +39,7 @@ root.render(
         </Canvas>
 
         <Analytics/>
-        
+
     </StrictMode>
 
         
