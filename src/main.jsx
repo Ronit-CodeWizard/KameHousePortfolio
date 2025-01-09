@@ -31,7 +31,7 @@ root.render(
                 <App/>   
             </Suspense>
 
-            <Perf position="top-left" />
+            {/*<Perf position="top-left" />*/}
         </Canvas>
     </StrictMode>
 
