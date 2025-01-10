@@ -13,7 +13,7 @@ console.log("Hi if you notice a bug please contact me max2002guillon@gmail.com")
 
 
 const isMobile = () => {
-    return ( ( window.innerWidth <= 800 ) && ( window.innerHeight <= 600 ) );
+    return ( ( window.innerWidth <= 1000 ) && ( window.innerHeight <= 800 ) );
   }
 
 const root = ReactDOM.createRoot(document.querySelector('#root'))
