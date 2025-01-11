@@ -2,9 +2,14 @@ import { useEffect, useState } from "react";
 import { Html } from "@react-three/drei";
 
 export default function ScrollHelper() {
+
   const [showScrollIcon, setShowScrollIcon] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   let timeoutRef = null;
+
+  const isMobile = () => {
+    return ( ( window.innerWidth <= 1000 ) && ( window.innerHeight <= 800 ) );
+  }
 
   useEffect(() => {
     timeoutRef = setTimeout(() => {
@@ -41,7 +46,7 @@ export default function ScrollHelper() {
             width: "30vh",
             cursor: "pointer",
           }}
-          src="./Textures/scroll.png"
+          src={ isMobile() ? "./Textures/scrollMob.png" : "./Textures/scrollPC.png" }
           alt="Scroll Icon"
         />
       )}
