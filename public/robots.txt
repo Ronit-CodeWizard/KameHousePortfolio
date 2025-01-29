@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://maximeguillon.com/sitemap.xml
