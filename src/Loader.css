@@ -16,7 +16,6 @@ body, html {
   align-items: center;
   flex-direction: column;  
 
-  background-image: url("./Textures/map.jpg");
   height: 100%;
   background-position: center;
   background-repeat: no-repeat;
