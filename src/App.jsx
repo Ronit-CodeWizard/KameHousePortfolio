@@ -6,6 +6,7 @@ import CameraScroll from './Components/CameraScroll.jsx'
 
 import "./App.css";
 import ScrollHelper from "./Components/ScrollHelper.jsx";
+import SEOBooster from "./SEOBooster.jsx";
 
 
 export default function App() {
@@ -14,6 +15,7 @@ export default function App() {
   
   return (
     <>
+      <SEOBooster/>
 
       <directionalLight position={ [1, 2, 3] } intensity={ 2.5 }/>
 
