@@ -40,25 +40,39 @@ root.render(
 
         <Analytics/>
         <div style={{ display: "none" }}>
-            <section>
-            <h1>Maxime Guillon</h1>
-            <h2>Creative Developer</h2>
-            <h2>Computer Science Student at Bordeaux University</h2>
-            </section>
-            <section>
-            <h2>Three.js Developer</h2>
-            <h2>GSAP Developer</h2>
-            <h2>3D Developer</h2>
-            <h2>Web Developer</h2>
-            </section>
-            <section>
-            <p>
-                Bienvenue sur le portfolio de Maxime Guillon. Ce portfolio 3D a été
-                réalisé à l'aide de Three.js et GSAP. La scène a été modélisée à l'aide
-                de Blender.
-            </p>
-            </section>
-        </div>
+  <section aria-hidden="true">
+    <h1>Maxime Guillon - Creative Developer</h1>
+    <h2>Computer Science Student at Bordeaux University</h2>
+    <h2>Three.js and React Three Fiber Expert</h2>
+    <h2>Specialized in 3D Web Development</h2>
+  </section>
+  <section aria-hidden="true">
+    <h2>Skills and Expertise</h2>
+    <ul>
+      <li>Three.js Developer</li>
+      <li>React Three Fiber Developer</li>
+      <li>GSAP Developer</li>
+      <li>3D Web Experiences</li>
+      <li>Creative Coding</li>
+    </ul>
+  </section>
+  <section aria-hidden="true">
+    <p>
+      Welcome to the 3D portfolio of Maxime Guillon. This immersive portfolio has 
+      been created using React Three Fiber and GSAP, with custom 3D models designed 
+      in Blender. Explore innovative web experiences that blend creativity and technology.
+    </p>
+  </section>
+  <noscript>
+    <p>
+      This 3D portfolio of Maxime Guillon showcases creative web development using 
+      React Three Fiber, Three.js, and GSAP. Please enable JavaScript to explore 
+      the immersive experience.
+    </p>
+  </noscript>
+</div>
+
+
 
     </StrictMode>
 
